@@ -22,7 +22,7 @@ export class Markdown extends Component {
 
     return (
       <div>
-        <textarea name="textarea" cols="30" rows="10" onChange={(e) => this.handleChange(e)}></textarea>
+        <textarea className='textarea' name="textarea" cols="30" rows="10" onChange={(e) => this.handleChange(e)}></textarea>
         <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(this.state.textarea) }}></div>
       </div>
     )

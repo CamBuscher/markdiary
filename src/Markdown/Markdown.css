@@ -1,0 +1,11 @@
+.textarea {
+  width: 50%;
+  resize: none;
+  height: 100vh;
+  border: none;
+  background-color: #505050;
+  color: turquoise;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
