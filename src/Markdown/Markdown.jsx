@@ -17,8 +17,6 @@ export class Markdown extends Component {
     this.setState({ [name]: value });
   }
 
-  
-
   render() {
     const converter = new showdown.Converter();
 
