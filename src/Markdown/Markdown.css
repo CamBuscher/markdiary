@@ -1,0 +1,21 @@
+.textarea {
+  width: 40%;
+  resize: none;
+  height: 100vh;
+  border: none;
+  background-color: #505050;
+  color: turquoise;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.markdown_output {
+  box-sizing: border-box;
+  width: 60%;
+  height: 100vh;
+  float: right;
+  padding: 0px 20px 20px 20px;
+  overflow: scroll;
+}
