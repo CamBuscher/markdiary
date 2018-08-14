@@ -1,5 +1,5 @@
 .textarea {
-  width: 50%;
+  width: 40%;
   resize: none;
   height: 100vh;
   border: none;
@@ -8,4 +8,14 @@
   box-sizing: border-box;
   padding: 10px;
   font-size: 16px;
+  display: inline-block;
+}
+
+.markdown_output {
+  box-sizing: border-box;
+  width: 60%;
+  height: 100vh;
+  float: right;
+  padding: 0px 20px 20px 20px;
+  overflow: scroll;
 }
