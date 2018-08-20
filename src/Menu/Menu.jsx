@@ -18,7 +18,7 @@ export default class Menu extends Component {
     return (
       // menuState
       <div className='drawer'>
-        
+        <img src="/delete-button.png" width={'25px'} className='menu_icon__close' />
       </div>
     );
   }

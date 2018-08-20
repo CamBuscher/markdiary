@@ -5,6 +5,13 @@
   cursor: pointer;
 }
 
+.menu_icon__close {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
 .drawer {
   height: 100vh;
   width: 250px;
