@@ -5,12 +5,21 @@ export default class Menu extends Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      hidden: true
+    };
   }
 
   render() {
+    const menuState = this.state.hidden ? 
+      <img src="/menu-icon.png" width={'25px'} className='menu_icon' /> :
+      <p>hello</p>
+
     return (
-      <img src="/menu-icon.png" width={'25px'} className='menu_icon'/>
+      // menuState
+      <div className='drawer'>
+        
+      </div>
     );
   }
 }
