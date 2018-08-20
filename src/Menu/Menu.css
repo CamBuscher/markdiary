@@ -1,0 +1,39 @@
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.menu_icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.menu_icon__close {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.drawer {
+  height: 100vh;
+  width: 250px;
+  background-color: #297373;
+  z-index: 2;
+  position: absolute;
+  right: 0px;
+  animation: .5s ease-out 0s 1 slideInFromLeft;
+}
+
+.username {
+  color: white;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
