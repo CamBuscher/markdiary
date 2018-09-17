@@ -2,7 +2,7 @@
 exports.up = function(knex, Promise) {
   return Promise.all([
     knex.schema.createTable('users', table => {
-      table.uuid('id').notNullable().primary();
+      table.uuid('id').defaultTo(knex.raw("uuid_generate_v4()")).notNullable().primary();
       table.string('username').unique();
       table.string('password');
       table.timestamps(true, true)
