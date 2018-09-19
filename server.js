@@ -46,7 +46,7 @@ app.get('/api/v1/files/:userID', (req, res) => {
   if (!userID) {
     return res
       .status(422)
-      .send({ error: `You're missing a "userID" property.` });
+      .send({ error: `You're missing a "user_ID" at the end of your GET request. IE: /api/v1/files/<user_ID>.` });
   }
 
   database('files').where('user_id', userID).select()
@@ -60,6 +60,19 @@ app.get('/api/v1/files/:userID', (req, res) => {
     .catch(error => {
       res.status(500).json({ error });
     })
+})
+
+app.post('/api/v1/files/', (req, res) => {
+  const { file } = req.body;
+
+  for (let requiredParameter of ['title', 'markdown', 'user_id']) {
+    if (!file[requiredParameter]) {
+      return res.status(422)
+        .send({ error: `Expected format: { file: { title: <String>, markdown: <String>, user_id: <String> }}. You're missing a "${requiredParameter}" property.` })
+    }
+  }
+
+  database('files')
 })
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
